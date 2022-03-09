@@ -55,6 +55,6 @@ This notebook creates a time series of the VI and Otsu's method.
 
 
 
-!["Figure 1: Data Flow Diagram"](https://github.com/LRosen656/USDA_GEMS_TASK1/blob/main/USDA%20Task%201.png)
+!["Figure 1: Data Flow Diagram"](https://github.com/LRosen656/USDA_GEMS_RGB_COVER/blob/main/USDA%20Task%201_higherarchy.png)
 
 
