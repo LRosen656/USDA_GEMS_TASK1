@@ -44,9 +44,7 @@ This notebook performs Otsu's Threshold on each image VI. It also records plant 
 (Include method code)
 
 
-### Time Series
 
-This notebook creates a time series of the VI and Otsu's method.
 
 
 
