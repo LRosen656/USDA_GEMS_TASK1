@@ -6,7 +6,7 @@ backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393
 backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
 black @ file:///home/conda/feedstock_root/build_artifacts/black-recipe_1643636307408/work
 bleach @ file:///home/conda/feedstock_root/build_artifacts/bleach_1629908509068/work
-certifi==2021.10.8
+certifi==2022.5.18.1
 cffi @ file:///D:/bld/cffi_1636046270630/work
 click @ file:///D:/bld/click_1635822759200/work
 cloudpickle @ file:///home/conda/feedstock_root/build_artifacts/cloudpickle_1631273254894/work
@@ -19,6 +19,7 @@ debugpy @ file:///D:/bld/debugpy_1636043518246/work
 decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1641555617451/work
 defusedxml @ file:///home/conda/feedstock_root/build_artifacts/defusedxml_1615232257335/work
 entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1643888246732/work
+et-xmlfile==1.0.1
 executing @ file:///home/conda/feedstock_root/build_artifacts/executing_1633213722787/work
 flit_core @ file:///home/conda/feedstock_root/build_artifacts/flit-core_1640697294996/work/source/flit_core
 fonttools @ file:///D:/bld/fonttools_1643722706834/work
@@ -56,6 +57,7 @@ nest-asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_16
 networkx @ file:///home/conda/feedstock_root/build_artifacts/networkx_1635253012265/work
 notebook @ file:///home/conda/feedstock_root/build_artifacts/notebook_1643149609895/work
 numpy @ file:///D:/bld/numpy_1643959173277/work
+openpyxl @ file:///home/conda/feedstock_root/build_artifacts/openpyxl_1632332968451/work
 packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1637239678211/work
 pandas @ file:///D:/bld/pandas_1642871741660/work
 pandocfilters @ file:///home/conda/feedstock_root/build_artifacts/pandocfilters_1631603243851/work
