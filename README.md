@@ -19,7 +19,7 @@ The Anaconda environment was "ag_env" and used several installed image processin
 
 The following diagram shows the flow process for each notebook. 
 
-!["Figure 1: Data Flow Diagram"](https://github.com/LRosen656/USDA_GEMS_RGB_COVER/blob/main/USDA%20Task%201_simplified.png)
+!["Figure 1: Data Flow Diagram"](https://github.com/LRosen656/USDA_GEMS_RGB_COVER/blob/main/USDA_Task_1_Simplified.png)
 
 ### Rename Image
 
