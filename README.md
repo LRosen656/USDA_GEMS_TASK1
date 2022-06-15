@@ -72,16 +72,16 @@ This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipyn
 
 
 
-    Thresh = threshold_otsu(img)                  Threshold (number)
-    classified = np.where(img>Thresh, 1, 0)       Reclassifies everything greater than thresh as 1 else zero
+    Thresh = threshold_otsu(img)                  ##Threshold (number)
+    classified = np.where(img>Thresh, 1, 0)       ##Reclassifies everything greater than thresh as 1, else zero
 
 
 #### Global
 This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipynb' and the dataframe created in '0.3_DataFrame_Mean_Green.ipynb' to get Otsu's Threshold value for each index globally. First, the dataframe is uploaded and used to call the images in each vegetation index. Then, Numpy is used to used to append and flatten the array for each index. Finally Otsu's Threshold from Scikit Image is used on the large matrix and output number is appended to the dataframe.
 
 
-        Index = np.append(Index, img.flatten())
-         Thresh = threshold_otsu(Index) 
+        Index = np.append(Index, img.flatten())              ##Long matrix of all index values 
+         Thresh = threshold_otsu(Index)                      ##Global Threshold  
 
 
 ### Zero Threshold
@@ -89,13 +89,13 @@ This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipyn
 This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipynb' and the dataframe created in '0.3_DataFrame_Mean_Green.ipynb' to classify images as vegetation or non-vegetation. First, the dataframe is uploaded and used to call the images in each vegetation index. Finally a zero will be used to reclassify the images. 
 
 
- classified = np.where(img>0, 1, 0)
+  classified = np.where(img>0, 1, 0)                          ##Reclassifies everything greater than zero as 1, else zero
 
 
 
 ### Ground Truthing
 
-This notebook ground truths the classified images made in several previous notebooks by user input to the reference image (i.e inital image). First, the reference and each classified image are called. Then the user inputs a number (0 for nonvegetation and 1 for vegetation) based on 30 randomly sampled points represented by a red x.
+This notebook ground truths the classified images made in several previous notebooks by user input to the reference image (i.e inital image). First, the reference and each classified image are called. Then the user inputs a number (0 for nonvegetation and 1 for vegetation) based on 30 randomly sampled points represented by a red 'x'.
 
 Eight images were randomly selected per date for a total of 56 images.
 
