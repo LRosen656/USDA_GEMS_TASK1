@@ -72,16 +72,16 @@ This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipyn
 
 
 
-    Thresh = threshold_otsu(img)                  ##Threshold (number)
-    classified = np.where(img>Thresh, 1, 0)       ##Reclassifies everything greater than thresh as 1, else zero
+    Thresh = threshold_otsu(img)                  ## Threshold (number)
+    classified = np.where(img>Thresh, 1, 0)       ## Reclassifies everything greater than thresh as 1, else zero
 
 
 #### Global
 This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipynb' and the dataframe created in '0.3_DataFrame_Mean_Green.ipynb' to get Otsu's Threshold value for each index globally. First, the dataframe is uploaded and used to call the images in each vegetation index. Then, Numpy is used to used to append and flatten the array for each index. Finally Otsu's Threshold from Scikit Image is used on the large matrix and output number is appended to the dataframe.
 
 
-        Index = np.append(Index, img.flatten())              ##Long matrix of all index values 
-         Thresh = threshold_otsu(Index)                      ##Global Threshold  
+        Index = np.append(Index, img.flatten())              ## Long matrix of all index values 
+         Thresh = threshold_otsu(Index)                      ## Global Threshold  
 
 
 ### Zero Threshold
@@ -89,7 +89,7 @@ This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipyn
 This notebook uses the vegetation indicies created in '1.0_Vegetation_Index.ipynb' and the dataframe created in '0.3_DataFrame_Mean_Green.ipynb' to classify images as vegetation or non-vegetation. First, the dataframe is uploaded and used to call the images in each vegetation index. Finally a zero will be used to reclassify the images. 
 
 
-  classified = np.where(img>0, 1, 0)                          ##Reclassifies everything greater than zero as 1, else zero
+  classified = np.where(img>0, 1, 0)                          ## Reclassifies everything greater than zero as 1, else zero
 
 
 
@@ -103,8 +103,19 @@ Eight images were randomly selected per date for a total of 56 images.
 
 This notebook uses the spreadsheets created in "Ground_Truth.ipynb" to find accuracy of each image, index and threshold. First, the overall accuracy from Scikit Learn will be collected from each image and exported to a spreadsheed. Then, a confusion maxrix will be made for each threshold and the overall, precision, and recall accuracy will be collected and exported to spreadsheet.
 
+Overall Accuracy  = TP + TN / (TP + TN + FP + FN)
+
+Precision Accuracy = TP / (TP + FP)       ## Checks for overclassification
+
+Recall Accuracy = TP / (TP + FN)          ## Checks for ommissions. 
+
 ### Percent Vegetation
 
 This notebook uses ExGR-Zero-Threshold created in "2.2_Otsu_Thresh_Zero.ipynb", the prepared images ceated in "0.2_Image_Crop.ipynb", and the vegetation indicies created in "1.0_Vegetation_Index.ipynb" to summarize vegetation cover. The reason why ExGR-Zero-Threshold is used is because it had the highest overall accuracy. First, a dataframe is created using "Oat_Data.csv". Then, percent vegetation is found by taking the average of each classified image (total vegetation/ area). The normalized green is found from the prepared images and clipped to the classified vegetation. EXG, EXGR, GLI, and VARI indicies are also clipped to the classified vegetation. Finally, the average is found by taking the sum of the value and dividing it by the sum of classified vegetation.
 
 Percent Vegetation = Classified Vegetation/Area
+
+
+# Plotting Accuracy, Predicted, Harvest Metrics
+
+This final notebook uses the statistcs made in "4.0_Accuracy_Assessment.ipynb", percent cover found in "5.0_Percent_Vegetation.ipynb", and harvested data found in the Google Drive to plot the results. First, the overall accuracy will be plotted using Seaborn's categorical plot. Next, correlations are plotted between ground truth references values and colors/indices. Then, percent vegetation is graphed over time. Finally, harvested data is compared to average colors/indicies collected on the final date. 
