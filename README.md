@@ -111,6 +111,10 @@ Precision Accuracy = TP / (TP + FP)       ## Checks for overclassification
 
 Recall Accuracy = TP / (TP + FN)          ## Checks for ommissions. 
 
+Specificity = TN / (TN + FP)              ## Checks for ommissions (of non vegetation).
+
+Where TP is true positive, TN is true negative, FP is false positive, and FN is false negative.    
+
 ### Percent Vegetation
 
 This notebook uses ExGR-Zero-Threshold created in "2.2_Otsu_Thresh_Zero.ipynb", the prepared images ceated in "0.2_Image_Crop.ipynb", and the vegetation indicies created in "1.0_Vegetation_Index.ipynb" to summarize vegetation cover. The reason why ExGR-Zero-Threshold is used is because it had the highest overall accuracy. First, a dataframe is created using "Oat_Data.csv". Then, percent vegetation is found by taking the average of each classified image (total vegetation/ area). The normalized green is found from the prepared images and clipped to the classified vegetation. EXG, EXGR, GLI, and VARI indicies are also clipped to the classified vegetation. Finally, the average is found by taking the sum of the value and dividing it by the sum of classified vegetation.
@@ -118,6 +122,10 @@ This notebook uses ExGR-Zero-Threshold created in "2.2_Otsu_Thresh_Zero.ipynb", 
 Percent Vegetation = Classified Vegetation/Area
 
 
-# Plotting Accuracy, Predicted, Harvest Metrics
+## Plotting Accuracy, Predicted, Harvest Metrics
 
 This final notebook uses the statistcs made in "4.0_Accuracy_Assessment.ipynb", percent cover found in "5.0_Percent_Vegetation.ipynb", and harvested data found in the Google Drive to plot the results. First, the overall accuracy will be plotted using Seaborn's categorical plot. Next, correlations are plotted between ground truth references values and colors/indices. Then, percent vegetation is graphed over time. Finally, harvested data is compared to average colors/indicies collected on the final date. 
+
+## Acknowledgements
+
+This work was funded by the United States Department of Agriculture, the GEMS Informatics Center’s Real-time Geoinformation Systems Lab Research Fund at the University of Minnesota, and the University of Minnesota MnDRIVE Global Food Ventures Faculty Scholars program. We thank S. Attalah, J. Johnson, and B. Perry for their contributions to data collection. 
