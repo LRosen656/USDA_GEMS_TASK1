@@ -4,7 +4,7 @@ Goolge Drive Link: [Link](https://drive.google.com/drive/folders/1jGNamFbxy59IkO
 
 ## Overview
 
-The purpose of this repository is to create a pipeline for processing images to find clover ground cover in a 2021 USDA Oat Study. A series of Jupyter Notebooks (Ananconda) are used to perform this task.   
+The purpose of this repository is to create a pipeline for processing images to find clover ground cover in a 2021 USDA Oat Study. A series of Jupyter Notebooks (Ananconda) are used to perform this task.  All Notebooks were run in a Windows enviroment and are meant to be run in order. 
 
 
 ## Data 
